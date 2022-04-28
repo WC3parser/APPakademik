@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8731ba40-2e26-4783-8c28-757a9e7b75c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tbl_mhs.`nim_mhs` AS tbl_mhs_nim_mhs,
+     tbl_mhs.`nm_mhs` AS tbl_mhs_nm_mhs,
+     tbl_mhs.`jk_mhs` AS tbl_mhs_jk_mhs,
+     tbl_mhs.`angkatan` AS tbl_mhs_angkatan,
+     tbl_mhs.`kd_jurusan` AS tbl_mhs_kd_jurusan,
+     tbl_mhs.`alamat_mhs` AS tbl_mhs_alamat_mhs
+FROM
+     `tbl_mhs` tbl_mhs]]>
+	</queryString>
+	<field name="tbl_mhs_nim_mhs" class="java.lang.String"/>
+	<field name="tbl_mhs_nm_mhs" class="java.lang.String"/>
+	<field name="tbl_mhs_jk_mhs" class="java.lang.String"/>
+	<field name="tbl_mhs_angkatan" class="java.lang.String"/>
+	<field name="tbl_mhs_kd_jurusan" class="java.lang.String"/>
+	<field name="tbl_mhs_alamat_mhs" class="java.lang.String"/>
+	<variable name="tbl_mhs_nim_mhs_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{tbl_mhs_nim_mhs}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="783943fb-7e35-41fa-a286-80cd475b65f4" x="0" y="0" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[KAMPUS MUHAMMADIYAH TANGERANG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="491d8bc9-b240-486c-97f0-e47c04206623" x="0" y="20" width="802" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROGRAM STUDI TEKNIK INFORMATIKA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5d20a353-0a6f-49a6-b814-0950c6db5b62" x="0" y="0" width="802" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1fd51646-193d-4b19-a84a-8d135f1b5bb6" x="21" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nim Mahasiswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="33d93c5c-e077-4795-bf5e-3f9968563ca9" x="137" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nama Mahasiswa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="308757c4-2b44-45d7-a444-8a02f92e83af" x="261" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jenis Kelamin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="3a9b5216-feaf-4638-9c6a-a1d4b170db0f" x="392" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Angkatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="49482d52-3035-4aaf-b20a-9409d1695f7c" x="536" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Jurusan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9ee763c1-29d1-446e-aefb-7fd9da795909" x="664" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="5d20a353-0a6f-49a6-b814-0950c6db5b62" x="0" y="0" width="802" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="9bc79b6f-d6e3-40fe-9a59-f2494140183a" x="21" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_nim_mhs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="822adaaa-df4a-4f69-ba1e-923e522f6471" x="137" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_nm_mhs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="17fb2405-e797-4803-bfc6-dba655f0bf12" x="392" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_angkatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e4c1203f-bfbd-4336-9398-4c1004fdf9ee" x="536" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_kd_jurusan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="31287b57-28ef-4149-b6bd-e3069795d05a" x="664" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_alamat_mhs}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="76d775d4-a313-4351-90dc-de564cb4338c" x="261" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tbl_mhs_jk_mhs}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
